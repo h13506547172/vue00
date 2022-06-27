@@ -1,2 +1,2 @@
-import './banner'
-import './tab'
+import './banner.js'
+import './tab.js'

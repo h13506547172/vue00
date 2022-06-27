@@ -6,4 +6,8 @@ module.exports = {
     path: path.join(__dirname, 'dist'), // 出口路径及其文件夹名字
     filename: 'bundle.js', // 修改出口文件名
   },
+  devServer: { //webpack.config.js
+    port: 3000, // 端口号
+    open: true
+  }
 };
