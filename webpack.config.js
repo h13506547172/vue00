@@ -38,17 +38,31 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'less-loader'],
       },
 
-      { //图片配置 webpack4版本
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader', // 匹配文件, 尝试转base64字符串打包到js中
-            // 配置limit, 超过8k, 不转, file-loader复制, 随机名, 输出文件
-            options: {
-              limit: 8 * 1024,
-            },
-          },
-        ],
+      // { //图片配置 webpack4版本
+      //   test: /\.(png|jpg|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'url-loader', // 匹配文件, 尝试转base64字符串打包到js中
+      //       // 配置limit, 超过8k, 不转, file-loader复制, 随机名, 输出文件
+      //       options: {
+      //         limit: 8 * 1024,
+      //       },
+      //     },
+      //   ],
+      // },
+
+      {
+        //图片配置 webpack5版本
+        test: /\.(png|jpg|gif|jpeg)$/i,
+        type: 'asset',
+        // type: 'asset/inline'  //直接转成base64
+        //默认把＞8kb的不转成base64，通过parser进行修改
+        // parser: { // 解析器 规则
+        //   dataUrlCondition: { // dataUrl的情况
+        //     maxSize: 30 * 1024,
+        //     // maxSize 限制最大值
+        //   },
+        // },
       },
     ],
   },
