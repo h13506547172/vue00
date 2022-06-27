@@ -86,6 +86,12 @@ module.exports = {
           },
         },
       },
+
+      //引入app.vue
+      {
+        test: /\.vue$/, // 匹配所有的vue文件
+        use: [ "html-loader","style-loader", "css-loader"]
+      },
     ],
   },
 };

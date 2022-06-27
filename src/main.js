@@ -3,6 +3,7 @@ import './tab.js'
 import './assets/fonts/iconfont.css'
 import './styles/index.css'
 import './styles/index.less'
+import './App.vue'
 
 import pic from "./assets/1.gif";
 let img = document.createElement('img');
