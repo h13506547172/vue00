@@ -1,5 +1,6 @@
 import './banner.js'
 import './tab.js'
+import './assets/fonts/iconfont.css'
 import './styles/index.css'
 import './styles/index.less'
 

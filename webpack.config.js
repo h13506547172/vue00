@@ -64,6 +64,16 @@ module.exports = {
         //   },
         // },
       },
+
+      {
+        // iconfont配置，直接配置
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        type: 'asset/resource', //全部输出到dist文件下
+        generator: {
+          //生成文件的名字的定义规则
+          filename: 'font-[name].[hash:6][ext]',
+        },
+      },
     ],
   },
 };
