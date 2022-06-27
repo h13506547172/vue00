@@ -37,6 +37,19 @@ module.exports = {
         // 使用less-loader, 让webpack处理less文件, 内置还会用less翻译less代码成css内容
         use: ['style-loader', 'css-loader', 'less-loader'],
       },
+
+      { //图片配置 webpack4版本
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader', // 匹配文件, 尝试转base64字符串打包到js中
+            // 配置limit, 超过8k, 不转, file-loader复制, 随机名, 输出文件
+            options: {
+              limit: 8 * 1024,
+            },
+          },
+        ],
+      },
     ],
   },
 };
