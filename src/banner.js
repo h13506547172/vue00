@@ -1,1 +1,1 @@
-console.log('我是tab区域');
+console.log('我是banner区域');
